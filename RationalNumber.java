@@ -8,7 +8,9 @@ public class RationalNumber extends RealNumber
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
-    super(0);//this value is ignored! 
+      super(nume/deno);//this value is ignored!
+      numerator = nume;
+      denominator = deno;
   }
 
   public double getValue(){
@@ -19,20 +21,20 @@ public class RationalNumber extends RealNumber
   *@return the numerator
   */
   public int getNumerator(){
-    return 0;
+      return numerator;
   }
   /**
   *@return the denominator
   */
   public int getDenominator(){
-    return 0;
+      return denominator;
   }
   /**
   *@return a new RationalNumber that has the same numerator
   *and denominator as this RationalNumber but reversed.
   */
   public RationalNumber reciprocal(){
-    return null;
+      return new RationalNumber(getDenominator(),getNumerator());
   }
   /**
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
